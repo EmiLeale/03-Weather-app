@@ -1,0 +1,29 @@
+/* src/css/components/_weather-display.css */
+
+#weather-section { 
+    width: 80%;
+    max-width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+}
+
+#weather-section h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--dynamic-text-primary);
+}
+
+#weather-section p {
+    font-size: 2rem;
+    color: var(--dynamic-text-primary);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+

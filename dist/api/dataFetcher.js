@@ -71,7 +71,6 @@ export async function getCombinedWeatherDataForLocation(lat, lon, unit = 'metric
         try {
             if (sunriseSunsetData.results.timezone) {
                 worldTimeData = await fetchWorldTimeData(sunriseSunsetData.results.timezone);
-                console.log("World Time Data:", worldTimeData);
                 const currentCityTime = new Date(worldTimeData.datetime);
                 isDaytime = isCurrentTimeBetween(currentCityTime, sunriseSunsetData.results.sunrise, sunriseSunsetData.results.sunset);
             }

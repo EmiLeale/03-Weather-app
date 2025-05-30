@@ -1,0 +1,91 @@
+/* src/css/components/_hourly-forecast.css */
+
+#hourly-forecast {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dynamic-container-bg);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    border: 1px solid var(--dynamic-container-border);
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+#hourly-forecast:hover {
+    box-shadow: 5px 3px 5px var(--dynamic-text-secondary);
+    filter: brightness(1.05);
+}
+
+#hourly-forecast h2 {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 0.5rem;
+    color: var(--dynamic-text-primary);
+}
+
+#hours-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dynamic-container-border) transparent;
+}
+
+#hourly-forecast:hover #hours-container {
+    scrollbar-color: var(--dynamic-text-secondary) transparent;
+}
+
+#hours-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+#hours-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#hours-container::-webkit-scrollbar-thumb {
+    background-color: var(--dynamic-container-border);
+    border-radius: 4px;
+    border: 2px solid transparent;
+}
+
+#hours-container .hour {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    min-width: 70px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;   
+}
+
+#hours-container .hour:hover {
+    background-color: var(--dynamic-text-secondary);
+    border: 1px solid var(--dynamic-container-border);
+}
+
+#hours-container .hour * {
+    font-size: 0.8rem;
+    margin: 0.1rem 0;
+    color: var(--dynamic-text-secondary);
+    transition: color 0.3s ease;
+}
+#hours-container .hour:hover * {
+    color: var(--dynamic-container-bg);
+}

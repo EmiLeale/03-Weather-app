@@ -1,0 +1,80 @@
+#daily-forecast {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dynamic-container-bg);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    border: 1px solid var(--dynamic-container-border);
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    
+}
+
+#daily-forecast:hover {
+    box-shadow: 5px 3px 5px var(--dynamic-text-secondary);
+    filter: brightness(1.05);
+}
+
+#daily-forecast h2 {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 0.5rem;
+    color: var(--dynamic-text-primary);
+}
+
+#days-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dynamic-container-border) transparent;
+}
+
+#days-container .day {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}	
+
+#days-container .day * {
+    font-size: 0.8rem;
+    margin: 0.1rem 0;
+}	
+
+#days-container .day div{
+    width: 50%;
+    height: 35%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dynamic-text-secondary);
+}
+#days-container .day > p {
+    width: 10%;
+}
+
+#days-container .day span {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#days-container .day span p {
+    font-size: 0.6rem;
+}

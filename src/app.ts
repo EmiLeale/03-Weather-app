@@ -78,6 +78,45 @@ async function searchCityAndDisplayWeather(cityName: string | null): Promise<voi
             `;
         }
 
+        // Lógica para aplicar el tema basada en isDaytime y la condición del clima
+        let themeClass = '';
+        const weatherCondition : string = combinedData.weatherData.dataseries[0].weather; // Ej: 'clear', 'cloudy', 'rain'
+        const isDaytime = combinedData.isDaytime; // Ya calculado con la hora del lugar
+
+        if (isDaytime) {
+            // Lógica de temas para el día
+            if (weatherCondition === 'clear') {
+                themeClass = 'theme-day-clear';
+            } else if (weatherCondition.includes('cloud') || weatherCondition === 'fog') {
+                themeClass = 'theme-day-cloudy';
+            } else if (weatherCondition.includes('rain') || weatherCondition.includes('snow') || weatherCondition.includes('storm')) {
+                themeClass = 'theme-day-rainy';
+            } else {
+                // Fallback para cualquier otra condición diurna si no coincide explícitamente
+                themeClass = 'theme-day-clear';
+            }
+        } else { // Es de noche
+            // Lógica de temas para la noche
+            if (weatherCondition === 'clear') {
+                themeClass = 'theme-night-clear';
+            } else {
+                // Todas las demás condiciones nocturnas (nublado, lluvia, nieve, etc.)
+                themeClass = 'theme-night-cloudy-rainy';
+            }
+        }
+
+        // Opcional: Considerar Atardecer/Amanecer como un tema separado si el momento es cercano
+        // Puedes añadir una lógica aquí para un tema de 'transición' si lo necesitas.
+        // Esto es más complejo y requeriría comparar la hora actual con sunrise/sunset de forma más granular.
+        // Por ejemplo:
+        // if (isTimeCloseToSunriseOrSunset(currentCityTime, combinedData.sunriseSunsetData)) {
+        //     themeClass = 'theme-sunset-sunrise';
+        // }
+
+        // Elimina clases de tema anteriores y añade la nueva al body
+        document.body.className = ''; // Limpia todas las clases existentes
+        document.body.classList.add(themeClass);
+
     } catch (error) {
         console.error("Error al buscar ciudad o cargar datos:", error);
         alert(`No se pudo encontrar la ciudad o cargar los datos: ${error instanceof Error ? error.message : "Error desconocido."}`);

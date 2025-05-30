@@ -4,12 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <!-- <link href="styles.css" rel="stylesheet"> -->
+    <link href="/src/css/styles.css" rel="stylesheet">
     <!-- <link rel="icon" type="image/x-icon" href="/assets/logo/ico.png"> -->
 </head>
 <body>
+    <section id="weather-section"> <!-- Weather section -->
+        <h2>Rosario</h2>
+        <p>10°</p>
+
+        <div id="hourly-forecast">
+            <h2><i data-lucide="clock-fading" class="default-icon"></i>Previcion for hours</h2>
+            <div id="hours-container">
+                <div class="hour">
+                    <p>10:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>12°</p>
+                </div>
+                <div class="hour">
+                    <p>11:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>13°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>14°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>14°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>14°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>14°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>14°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>14°</p>
+                </div>
+                <div class="hour">
+                    <p>12:00</p>
+                    <i data-lucide="sun" class="default-icon"></i>
+                    <p>20°</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="daily-forecast">
+            <h2><i data-lucide="calendar" class="default-icon"></i>Previcion for days</h2>
+            <div id="days-container">
+                <div class="day">
+                    <p>Mon</p>
+                    <span><i data-lucide="sun" class="default-icon"></i></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+                <div class="day">
+                    <p>Tue</p>
+                    <span><i data-lucide="cloud-sun" class="default-icon"></i></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+                <div class="day">
+                    <p>Wed</p>
+                    <span><i data-lucide="cloud-rain" class="default-icon"></i><p>50%</p></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+                <div class="day">
+                    <p>Thu</p>
+                    <span><i data-lucide="cloud-snow" class="default-icon"></i><p>50%</p></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+                <div class="day">
+                    <p>Fri</p>
+                    <span><i data-lucide="cloud-lightning" class="default-icon"></i><p>80%</p></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+                <div class="day">
+                    <p>Fri</p>
+                    <span><i data-lucide="cloud-lightning" class="default-icon"></i><p>90%</p></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+                <div class="day">
+                    <p>Fri</p>
+                    <span><i data-lucide="cloud-lightning" class="default-icon"></i><p>90%</p></span>
+                    <p>8°</p>
+                    <div></div>
+                    <p>20°</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
     <!-- <script type="module" src="api/weatherService.js"></script> -->
     <script type="module" src="/dist/app.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
 

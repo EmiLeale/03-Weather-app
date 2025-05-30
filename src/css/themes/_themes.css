@@ -1,0 +1,71 @@
+/* src/css/themes/_themes.css */
+
+/* --- Themes for every day situation --- */
+.theme-day-clear { /* Clear and sunny skies */
+    --dynamic-text-primary: var(--color-text-dark-primary);
+    --dynamic-text-secondary: var(--color-text-dark-secondary);
+    --dynamic-text-highlight: var(--color-text-accent-blue);
+    --dynamic-container-bg: var(--color-container-white-70);
+    --dynamic-container-border: var(--color-border-light-grey);
+    --dynamic-container-accent: var(--color-accent-light-grey);
+    --dynamic-icon-color: var(--color-text-dark-primary);
+    --dynamic-background: var(--color-background-day);
+}
+
+.theme-day-cloudy { /* Cloudy or foggy days */
+    --dynamic-text-primary: var(--color-text-dark-primary);
+    --dynamic-text-secondary: var(--color-text-dark-secondary);
+    --dynamic-text-highlight: var(--color-text-accent-blue);
+    --dynamic-container-bg: var(--color-container-white-60);
+    --dynamic-container-border: var(--color-border-medium-grey);
+    --dynamic-container-accent: var(--color-accent-medium-grey);
+    --dynamic-icon-color: var(--color-text-dark-primary);
+    --dynamic-background: var(--color-background-cloudy);
+
+}
+
+.theme-day-rainy { /* Rainy, snowy or stormy days (during the day) */
+    --dynamic-text-primary: var(--color-text-dark-primary);
+    --dynamic-text-secondary: var(--color-text-dark-secondary);
+    --dynamic-text-highlight: var(--color-text-accent-blue);
+    --dynamic-container-bg: var(--color-container-white-60);
+    --dynamic-container-border: var(--color-border-medium-grey);
+    --dynamic-container-accent: var(--color-accent-medium-grey);
+    --dynamic-icon-color: var(--color-text-dark-primary);
+    --dynamic-background: var(--color-background-rainy);
+
+}
+
+.theme-sunset-sunrise { /* Day-to-night transitions and vice versa */
+    --dynamic-text-primary: var(--color-text-light-primary);
+    --dynamic-text-secondary: var(--color-text-light-secondary);
+    --dynamic-text-highlight: var(--color-text-accent-gold);
+    --dynamic-container-bg: var(--color-container-black-50);
+    --dynamic-container-border: var(--color-border-translucent-light);
+    --dynamic-container-accent: var(--color-accent-translucent);
+    --dynamic-icon-color: var(--color-text-light-primary);
+}
+
+.theme-night-clear { /* Clear and starry nights */
+    --dynamic-text-primary: var(--color-text-light-primary);
+    --dynamic-text-secondary: var(--color-text-light-secondary);
+    --dynamic-text-highlight: var(--color-text-accent-sky);
+    --dynamic-container-bg: var(--color-container-black-60);
+    --dynamic-container-border: var(--color-border-translucent-medium);
+    --dynamic-container-accent: var(--color-accent-translucent);
+    --dynamic-icon-color: var(--color-text-light-primary);
+    --dynamic-background: var(--color-background-night);
+
+}
+
+.theme-night-cloudy-rainy { /* Cloudy, rainy or stormy nights */
+    --dynamic-text-primary: var(--color-text-light-primary);
+    --dynamic-text-secondary: var(--color-text-light-secondary);
+    --dynamic-text-highlight: var(--color-text-accent-light-blue);
+    --dynamic-container-bg: var(--color-container-black-70);
+    --dynamic-container-border: var(--color-border-translucent-dark);
+    --dynamic-container-accent: var(--color-accent-translucent);
+    --dynamic-icon-color: var(--color-text-light-primary);
+    --dynamic-background: var(--color-background-night-rainy);
+
+}
